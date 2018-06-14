@@ -1,0 +1,130 @@
+//
+//  NSDate+CalculatePeriod.h
+//  WetalkCommunity
+//
+//  Created by hch on 2017/10/10.
+//  Copyright © 2017年 chaziyjs. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NSDate (CalculatePeriod)
+- (NSString *)prettyDateWithReference:(NSDate *)reference date:(NSDate *)date;
+
++ (NSString *)convertTime:(CGFloat)second;
+
++ (NSString *)CalcuLadate:(NSNumber *)reference;
+
+/**
+ 对象方法 : 转化时间格式 Date -> String
+
+ @param data_string 显示时间格式 例:YYYY-MM-DD
+ @return 字符串 YYYY-MM-DD 时间
+ */
+- (NSString *)dateFormateWithString:(NSString *)data_string;
+
+/**
+ 类方法 : 通过时间戳转化时间格式
+
+ @param time 需要转换的时间戳
+ @param data_string 显示时间格式 例:YYYY-MM-DD
+ @return 字符串 YYYY-MM-DD 时间
+ */
++ (NSString *)dateFormateTimeInterval:(NSTimeInterval)time
+                           WithString:(NSString *)data_string;
+
+/**
+ 计算指定两段时间的时间戳
+
+ @param lotDate 目标时间
+ @param curDate 当前时间
+ @return 时间戳
+ */
++ (NSTimeInterval)secFromLotteryDate:(NSDate *)lotDate CurrentDate:(NSDate *)curDate;
+
+/**
+ 计算目标日期距离当前时间的秒数差
+
+ @param lotDate 目标时间
+ @param curDate 当前时间
+ @return 秒数差
+ */
++ (double)secondFromLotteryDate:(NSDate *)lotDate CurrentDate:(NSDate *)curDate;
+
+/**
+ 计算目标时间距离当前时间的天数差
+
+ @param lotDate 目标时间
+ @param curDate 当前时间
+ @return 天数差
+ */
++ (NSInteger)daysFromLotteryDate:(NSDate *)lotDate CurrentDate:(NSDate *)curDate;
+
+
+/**
+ 计算目标时间距离当前时间的时间差
+
+ @param lotDate 目标时间
+ @param curDate 当前时间
+ @return NSDateComponents 对象
+ */
++ (NSDateComponents *)dateFromLotteryDate:(NSDate *)lotDate CurrentDate:(NSDate *)curDate;
+
+/**
+ 时间搓按照指定格式输出
+
+ @param timestr 时间戳
+ @return 年月日时分秒-格式输出
+ */
++ (NSString *)returnYYMMDDHHMMSSDateBy:(NSString *)timestr;
+
+
+/**
+ 时间搓按照指定格式输出
+
+ @param timestr 时间戳
+ @return 年月日时分-格式输出
+ */
++ (NSString *)returnYYMMDDHHMMDateBy:(NSString *)timestr;
+/**
+ 时间搓按照指定格式输出
+ 
+ @param timestr 时间戳
+ @return 年月日-格式输出
+ */
++ (NSString *)returnYYMMDDDateBy:(NSString *)timestr;
+
+
+/**
+ @param reference 时间戳
+ @return 年月日-格式输出（不会补0
+ */
++(NSString *)CalcuLatodayOrMMdd:(NSNumber*)reference;
+
+/**
+ @param reference 时间戳
+ @return 今天，昨天时间
+ */
++(NSString *)LACalcuLadate:(NSNumber*)reference;
+
+
+/**
+ 两个时间是否是同一天
+
+ @param iTime1 时间1
+ @param iTime2 时间2
+ @return 是否是同一天 YES:是 NO:不是
+ */
++ (BOOL)isSameDay:(long)iTime1 Time2:(long)iTime2;
+
+
+
+/**
+ 获取当前时间戳
+
+ @return 当前时间戳字符串格式
+ */
++ (NSString *)currentTimeStr;
+
+
+@end

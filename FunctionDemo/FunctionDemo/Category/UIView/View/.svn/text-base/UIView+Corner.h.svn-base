@@ -1,0 +1,15 @@
+//
+//  UIView+Corner.h
+//  WetalkCommunity
+//
+//  Created by chaziyjs on 2017/9/22.
+//  Copyright © 2017年 chaziyjs. All rights reserved.
+//
+
+
+
+@interface UIView (Corner)
+
+- (void)drawRoundRectInContext;
+
+@end

@@ -1,0 +1,36 @@
+//
+//  UIView+Corner.m
+//  WetalkCommunity
+//
+//  Created by chaziyjs on 2017/9/22.
+//  Copyright © 2017年 chaziyjs. All rights reserved.
+//
+
+#import "UIView+Corner.h"
+
+@implementation UIView (Corner)
+
+- (void)drawRoundRectInContext
+{
+    CGRect rect = self.frame;
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGFloat minx = CGRectGetMinX(rect);
+    CGFloat midx = CGRectGetMidX(rect);
+    CGFloat maxx = CGRectGetMaxX(rect);
+    
+    CGFloat miny = CGRectGetMinY(rect);
+    CGFloat midy = CGRectGetMidY(rect);
+    CGFloat maxy = CGRectGetMaxY(rect);
+    CGFloat filletRadius = CGRectGetHeight(rect) * 0.5;
+    CGContextMoveToPoint(context, minx, midy);
+    
+    CGContextAddArcToPoint(context, minx, miny, midx, miny, filletRadius);
+    CGContextAddArcToPoint(context, maxx, miny, maxx, midy, filletRadius);
+    CGContextAddArcToPoint(context, maxx, maxy, midx, maxy, filletRadius);
+    CGContextAddArcToPoint(context, minx, maxy, minx, midy, filletRadius);
+    
+    CGContextClosePath(context);
+    CGContextSaveGState(context);
+}
+
+@end
