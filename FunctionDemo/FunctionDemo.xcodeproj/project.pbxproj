@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E01AB08420C4DBF300C63388 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E01AB08320C4DBF300C63388 /* UIView+YSTextInputKeyboard.m */; };
+		E01F0A5820E1BD3B00F2EA51 /* PayAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A4E20E1BD3B00F2EA51 /* PayAlertAction.m */; };
+		E01F0A5920E1BD3B00F2EA51 /* PayAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5020E1BD3B00F2EA51 /* PayAlertContentView.m */; };
+		E01F0A5A20E1BD3B00F2EA51 /* PayAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5220E1BD3B00F2EA51 /* PayAlertView.m */; };
+		E01F0A5B20E1BD3B00F2EA51 /* HomeScrollAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5520E1BD3B00F2EA51 /* HomeScrollAdCell.m */; };
+		E01F0A5C20E1BD3B00F2EA51 /* HomeScrollAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5720E1BD3B00F2EA51 /* HomeScrollAdView.m */; };
+		E01F0A5F20E1C43600F2EA51 /* AdListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5E20E1C43600F2EA51 /* AdListView.m */; };
 		E039A724207AED5F00DE8829 /* UIView+KeyFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E039A723207AED5F00DE8829 /* UIView+KeyFrameAnimation.m */; };
 		E039A72B207AFDE000DE8829 /* GroupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E039A72A207AFDE000DE8829 /* GroupAnimation.m */; };
 		E039A733207B35FC00DE8829 /* MBProgressHUD+CY.m in Sources */ = {isa = PBXBuildFile; fileRef = E039A730207B35FB00DE8829 /* MBProgressHUD+CY.m */; };
@@ -94,6 +100,18 @@
 /* Begin PBXFileReference section */
 		E01AB08220C4DBF300C63388 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
 		E01AB08320C4DBF300C63388 /* UIView+YSTextInputKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSTextInputKeyboard.m"; sourceTree = "<group>"; };
+		E01F0A4D20E1BD3B00F2EA51 /* PayAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayAlertAction.h; sourceTree = "<group>"; };
+		E01F0A4E20E1BD3B00F2EA51 /* PayAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayAlertAction.m; sourceTree = "<group>"; };
+		E01F0A4F20E1BD3B00F2EA51 /* PayAlertContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayAlertContentView.h; sourceTree = "<group>"; };
+		E01F0A5020E1BD3B00F2EA51 /* PayAlertContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayAlertContentView.m; sourceTree = "<group>"; };
+		E01F0A5120E1BD3B00F2EA51 /* PayAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayAlertView.h; sourceTree = "<group>"; };
+		E01F0A5220E1BD3B00F2EA51 /* PayAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayAlertView.m; sourceTree = "<group>"; };
+		E01F0A5420E1BD3B00F2EA51 /* HomeScrollAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScrollAdCell.h; sourceTree = "<group>"; };
+		E01F0A5520E1BD3B00F2EA51 /* HomeScrollAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScrollAdCell.m; sourceTree = "<group>"; };
+		E01F0A5620E1BD3B00F2EA51 /* HomeScrollAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScrollAdView.h; sourceTree = "<group>"; };
+		E01F0A5720E1BD3B00F2EA51 /* HomeScrollAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScrollAdView.m; sourceTree = "<group>"; };
+		E01F0A5D20E1C43600F2EA51 /* AdListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdListView.h; sourceTree = "<group>"; };
+		E01F0A5E20E1C43600F2EA51 /* AdListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdListView.m; sourceTree = "<group>"; };
 		E039A722207AED5F00DE8829 /* UIView+KeyFrameAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KeyFrameAnimation.h"; sourceTree = "<group>"; };
 		E039A723207AED5F00DE8829 /* UIView+KeyFrameAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KeyFrameAnimation.m"; sourceTree = "<group>"; };
 		E039A729207AFDE000DE8829 /* GroupAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupAnimation.h; sourceTree = "<group>"; };
@@ -255,6 +273,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E01F0A4B20E1BD3B00F2EA51 /* UITools */ = {
+			isa = PBXGroup;
+			children = (
+				E01F0A4C20E1BD3B00F2EA51 /* DIYAlertView */,
+				E01F0A5320E1BD3B00F2EA51 /* HomeScrollAdView */,
+			);
+			path = UITools;
+			sourceTree = "<group>";
+		};
+		E01F0A4C20E1BD3B00F2EA51 /* DIYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E01F0A4D20E1BD3B00F2EA51 /* PayAlertAction.h */,
+				E01F0A4E20E1BD3B00F2EA51 /* PayAlertAction.m */,
+				E01F0A4F20E1BD3B00F2EA51 /* PayAlertContentView.h */,
+				E01F0A5020E1BD3B00F2EA51 /* PayAlertContentView.m */,
+				E01F0A5120E1BD3B00F2EA51 /* PayAlertView.h */,
+				E01F0A5220E1BD3B00F2EA51 /* PayAlertView.m */,
+			);
+			path = DIYAlertView;
+			sourceTree = "<group>";
+		};
+		E01F0A5320E1BD3B00F2EA51 /* HomeScrollAdView */ = {
+			isa = PBXGroup;
+			children = (
+				E01F0A5420E1BD3B00F2EA51 /* HomeScrollAdCell.h */,
+				E01F0A5520E1BD3B00F2EA51 /* HomeScrollAdCell.m */,
+				E01F0A5620E1BD3B00F2EA51 /* HomeScrollAdView.h */,
+				E01F0A5720E1BD3B00F2EA51 /* HomeScrollAdView.m */,
+			);
+			path = HomeScrollAdView;
+			sourceTree = "<group>";
+		};
 		E039A728207AFDC600DE8829 /* GroupAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +387,9 @@
 				E076B9BB20CF8CED00A3DEDC /* SubTableView.m */,
 				E0F30BF220CA69DE003B895A /* TestObject.h */,
 				E0F30BF320CA69DE003B895A /* TestObject.m */,
+				E01F0A5D20E1C43600F2EA51 /* AdListView.h */,
+				E01F0A5E20E1C43600F2EA51 /* AdListView.m */,
+				E01F0A4B20E1BD3B00F2EA51 /* UITools */,
 				E039A72C207B2BE100DE8829 /* PrefixHeader.pch */,
 				E0A8344A2079AC2700828F4C /* Main.storyboard */,
 				E0A8344D2079AC2900828F4C /* Assets.xcassets */,
@@ -821,10 +875,12 @@
 			files = (
 				E0A8350C2079E39800828F4C /* DCPathCenterButton.m in Sources */,
 				E0A834DF2079AF1900828F4C /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				E01F0A5B20E1BD3B00F2EA51 /* HomeScrollAdCell.m in Sources */,
 				E0A8350F2079E39800828F4C /* SWRevealViewController.m in Sources */,
 				E0A834DA2079AF1900828F4C /* UIControl+btnControl.m in Sources */,
 				E0A834DC2079AF1900828F4C /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				E0A835092079E39800828F4C /* MCFireworksButton.m in Sources */,
+				E01F0A5920E1BD3B00F2EA51 /* PayAlertContentView.m in Sources */,
 				E0A834D42079AF1900828F4C /* UIImage+EX.m in Sources */,
 				E0A834D62079AF1900828F4C /* UIImage+ProportionalFill.m in Sources */,
 				E095241E20C0E3B600385D7A /* NSMutableArray+SaveArray.m in Sources */,
@@ -841,6 +897,8 @@
 				E0A834DE2079AF1900828F4C /* UITableView+FDKeyedHeightCache.m in Sources */,
 				E0A8350E2079E39800828F4C /* DWBubbleMenuButton.m in Sources */,
 				E0A834EB2079AF1900828F4C /* UINavigationItem+margin.m in Sources */,
+				E01F0A5A20E1BD3B00F2EA51 /* PayAlertView.m in Sources */,
+				E01F0A5F20E1C43600F2EA51 /* AdListView.m in Sources */,
 				E09ECD27208DBAA60065141F /* RegexKitLite.m in Sources */,
 				E0A834DD2079AF1900828F4C /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				E0A834D32079AF1900828F4C /* NSString+EX.m in Sources */,
@@ -855,9 +913,11 @@
 				E0A834462079AC2700828F4C /* AppDelegate.m in Sources */,
 				E0A834E82079AF1900828F4C /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E0A834EC2079AF1900828F4C /* UIViewController+EX.m in Sources */,
+				E01F0A5820E1BD3B00F2EA51 /* PayAlertAction.m in Sources */,
 				E039A724207AED5F00DE8829 /* UIView+KeyFrameAnimation.m in Sources */,
 				E0A834E52079AF1900828F4C /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				E0A834E12079AF1900828F4C /* UIScrollView+HeaderScaleImage.m in Sources */,
+				E01F0A5C20E1BD3B00F2EA51 /* HomeScrollAdView.m in Sources */,
 				E095242220C11F4900385D7A /* NSObject+safeMethod.m in Sources */,
 				E080AEB220C617B6005D93A5 /* BaseObject.m in Sources */,
 				E0A834D92079AF1900828F4C /* UIButton+UIButton_BgColor.m in Sources */,

@@ -10,6 +10,7 @@
 #import "UIView+Corner.h"
 #import "TestObject.h"
 #import "ScrollViewController.h"
+#import "AdListView.h"
 
 @interface ViewController : UIViewController
 

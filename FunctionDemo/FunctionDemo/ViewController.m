@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    _objects = @"123";
-    self.test = [TestObject new];
+//    self.test = [TestObject new];
 //    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
 //    [array removeObjectAtIndex:3];
 //    FLog(@"%@", [array objectAtIndex:3]);
@@ -69,20 +69,21 @@
 //    [obj setValue:self forKey:@"Number"];
 //    [obj performSelectorOnMainThread:@selector(uiojo) withObject:nil waitUntilDone:YES];
 //    NSLog(@"%@", [obj valueForKey:@"Number"]);
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setValue:[NSValue valueWithNonretainedObject:self] forKey:@"Controller"];
-    [dict setValue:NSStringFromSelector(@selector(KVOListen)) forKey:NSStringFromClass([self class])];
-    NSLog(@"dict = %@", dict);
-    for (NSString *keys in dict.allKeys) {
-//        Class class = NSClassFromString(keys);
-//        SEL sel = NSSelectorFromString(dict[keys]);
-//        [class performSelector:sel withObject:nil afterDelay:0];
-        if ([keys isEqualToString:@"Controller"]) {
-            NSValue *controllerValue = [dict valueForKey:keys];
-            UIViewController *viewController = (UIViewController *)controllerValue.nonretainedObjectValue;
-        }
-    }
-    [self KVOListen];
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//    [dict setValue:[NSValue valueWithNonretainedObject:self] forKey:@"Controller"];
+//    [dict setValue:NSStringFromSelector(@selector(KVOListen)) forKey:NSStringFromClass([self class])];
+//    NSLog(@"dict = %@", dict);
+//    for (NSString *keys in dict.allKeys) {
+////        Class class = NSClassFromString(keys);
+////        SEL sel = NSSelectorFromString(dict[keys]);
+////        [class performSelector:sel withObject:nil afterDelay:0];
+//        if ([keys isEqualToString:@"Controller"]) {
+//            NSValue *controllerValue = [dict valueForKey:keys];
+//            UIViewController *viewController = (UIViewController *)controllerValue.nonretainedObjectValue;
+//        }
+//    }
+//    [self KVOListen];
+    [self AdViewBuild];
 }
 
 - (void)KVOListen
@@ -100,11 +101,18 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (void)AdViewBuild
 {
-    ScrollViewController *scrollTest = [ScrollViewController new];
-    [self presentViewController:scrollTest animated:YES completion:nil];
+    AdListView *adView = [[AdListView alloc] initWithFrame:CGRectMake(0, 64.f, kScreenWidth, 100.f)];
+    [self.view addSubview:adView];
 }
+
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    ScrollViewController *scrollTest = [ScrollViewController new];
+//    [self presentViewController:scrollTest animated:YES completion:nil];
+//}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {

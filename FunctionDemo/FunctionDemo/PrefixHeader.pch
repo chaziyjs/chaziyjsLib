@@ -17,5 +17,6 @@
 #import "SelectorConfig.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+CY.h"
+#import "NSString+EX.h"
 
 #endif /* PrefixHeader_pch */

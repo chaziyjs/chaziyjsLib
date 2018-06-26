@@ -33,7 +33,7 @@
         } @catch(NSException *exception) {
             FLog(@"---------- %s Crash Because Method %s ----------\n", class_getName(self.class), __func__);
 #ifdef      DEBUG
-            NSAssert(self.count - 1 > index, @"NSMutableArray select object index beyond array count [0 ~ %ld] index = %ld", (long)self.count, index);
+            NSAssert(self.count - 1 > index, @"NSMutableArray select object index beyond array count [0 ~ %ld] index = %ld", (long)self.count - 1, index);
 #else
 #endif
             return nil;
@@ -53,7 +53,7 @@
         } @catch(NSException *exception) {
             FLog(@"---------- %s Crash Because Method %s ----------\n", class_getName(self.class), __func__);
 #ifdef      DEBUG
-            NSAssert(self.count - 1 > index, @"NSMutableArray remove object index beyond array count [0 ~ %ld] index = %ld", (long)self.count, index);
+            NSAssert(self.count - 1 > index, @"NSMutableArray remove object index beyond array count [0 ~ %ld] index = %ld", (long)self.count - 1, index);
 #else
 #endif
         } @finally {
