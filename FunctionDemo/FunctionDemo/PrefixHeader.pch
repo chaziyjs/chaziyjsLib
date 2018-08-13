@@ -13,10 +13,22 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+
 #import "SelectorConfig.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+CY.h"
 #import "NSString+EX.h"
+#import "UIImage+Color.h"
+#import "UIControl+btnControl.h"
+
+#import "YYKit.h"
+#import "UIImageView+WebCache.h"
+#import "UIView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "SDWebImageManager.h"
+#import "SDImageCache.h"
+#import "MJRefresh.h"
+
+#import "APIManager.h"
 
 #endif /* PrefixHeader_pch */

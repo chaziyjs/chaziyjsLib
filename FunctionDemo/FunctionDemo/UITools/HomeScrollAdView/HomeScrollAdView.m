@@ -28,7 +28,8 @@
     if (self) {
         stop = NO;
         cursor = 0;
-        
+        _inoutTime = 0.5;
+        _waitTime = 2.f;
     }
     return self;
 }
@@ -95,10 +96,11 @@
         cell.alpha = 0.f;
         __weak typeof(HomeScrollAdCell *) weakCell = cell;
         kWeakSelf(self);
-        [UIView animateWithDuration:0.2 delay:0.f usingSpringWithDamping:0.7 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [UIView animateWithDuration:_inoutTime delay:0.f usingSpringWithDamping:0.7 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             weakCell.center = CGPointMake(CGRectGetWidth(weakself.frame) * 0.5, CGRectGetHeight(weakself.frame) * 0.5);
+            weakCell.alpha = 1.f;
         } completion:^(BOOL finished) {
-            [weakself performSelector:@selector(cellMoveOut:) withObject:weakCell afterDelay:3.0];
+            [weakself performSelector:@selector(cellMoveOut:) withObject:weakCell afterDelay:self->_waitTime];
         }];
     }
 }
@@ -109,8 +111,10 @@
     kWeakSelf(self);
     __block typeof(NSUInteger) weak_count = ++cursor;
     __block typeof(BOOL) weak_stop = stop;
-    [UIView animateWithDuration:0.2 delay:0.f usingSpringWithDamping:0.7 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    cell.alpha = 1;
+    [UIView animateWithDuration:_inoutTime delay:0.f usingSpringWithDamping:0.7 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         weakCell.center = CGPointMake(0 - (CGRectGetWidth(weakCell.frame) * 0.5), CGRectGetHeight(weakself.frame) * 0.5);
+        weakCell.alpha = 0.f;
     } completion:^(BOOL finished) {
         [weakCell removeFromSuperview];
         if (weak_stop == NO) {

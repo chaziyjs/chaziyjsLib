@@ -105,6 +105,8 @@
 {
     AdListView *adView = [[AdListView alloc] initWithFrame:CGRectMake(0, 64.f, kScreenWidth, 100.f)];
     [self.view addSubview:adView];
+    
+    
 }
 
 

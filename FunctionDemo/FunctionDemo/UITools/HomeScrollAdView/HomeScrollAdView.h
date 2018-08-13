@@ -30,6 +30,9 @@
 @property (nonatomic, weak) id<HomeScrollAdViewDelegate> delegate;
 @property (nonatomic, weak) id<HomeScrollAdViewDataSource> dataSource;
 
+@property (nonatomic, assign) NSTimeInterval inoutTime;
+@property (nonatomic, assign) NSTimeInterval waitTime;
+
 - (void)reloadData;
 
 - (HomeScrollAdCell *)homeScrollAdCellForIndexPath:(NSIndexPath *)indexpath;

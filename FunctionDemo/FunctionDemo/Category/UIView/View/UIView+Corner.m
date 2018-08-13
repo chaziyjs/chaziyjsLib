@@ -10,13 +10,16 @@
 
 @implementation UIView (Corner)
 
-- (void)drawRoundRectInContextWithRadius:(CGFloat)radius corners:(UIRectCorner)corners
+- (void)drawRoundRectInContextWithRadius:(CGFloat)radius corners:(UIRectCorner)corners LineWidth:(CGFloat)lineWidth LineColor:(UIColor *)lineColor
 {
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(radius, radius)];
-    maskPath.lineWidth     = 0.f;
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = self.bounds;
     maskLayer.path = maskPath.CGPath;
+    if (lineWidth != 0.f) {
+        maskLayer.lineWidth = lineWidth;
+        maskLayer.strokeColor = lineColor.CGColor;
+    }
     self.layer.mask = maskLayer;
 }
 

@@ -53,7 +53,7 @@
     HUD.color = [UIColor clearColor];
     HUD.labelText = text;
     HUD.square = YES;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelFont = CUSTOMFONT(14.f);
     HUD.mode = MBProgressHUDModeCustomView;
     
@@ -82,10 +82,10 @@
 + (void)drawErrorViewWithText:(NSString *)text during:(CGFloat)times view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
     HUD.labelText = text;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
@@ -180,10 +180,10 @@
 + (void)drawRightViewWithText:(NSString *)text during:(CGFloat)times view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
     HUD.labelText = text;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
@@ -251,10 +251,10 @@
 + (MBProgressHUD *)drawRoundLoadingView:(NSString *)text view:(UIView *)view {
     
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
     HUD.labelText = text;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
@@ -333,13 +333,13 @@
 + (void)showTitle:(NSString *)title Detail:(NSString *)detail View:(UIView *)view During:(CGFloat)times
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeText;
     HUD.labelText = title;
     HUD.detailsLabelText = detail;
     HUD.detailsLabelFont = CUSTOMFONT(10.f);
     HUD.labelFont = CUSTOMFONT(14.f);
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     [HUD hide:YES afterDelay:times];
 }
 
@@ -347,10 +347,10 @@
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
     HUD.mode = MBProgressHUDModeText;
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.labelText = notice;
     HUD.labelFont = CUSTOMFONT(14.f);
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     [HUD hide:YES afterDelay:times];
     return HUD;
 }
@@ -359,7 +359,7 @@
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
     HUD.mode = MBProgressHUDModeIndeterminate;
-    HUD.color = kcolorTVGrayBorder;//默认黑色
+    HUD.color = kColorTextGray;//默认黑色
     HUD.activityIndicatorColor = kColorWithCode(@"#FF7E00");//菊花颜色
     return HUD;
 }
@@ -367,12 +367,12 @@
 + (MBProgressHUD *)defaultMBProgressWithText:(NSString *)text view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeIndeterminate;
     HUD.square = YES;
     HUD.labelFont = CUSTOMFONT(14.f);
     HUD.labelText = text;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     
     return HUD;
 }
@@ -393,9 +393,9 @@
 + (void)drawRightViewWithAttributedText:(NSMutableAttributedString *)text during:(CGFloat)times view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelAttributedString = text;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
@@ -461,9 +461,9 @@
 + (void)drawErrorViewWithAttributedText:(NSMutableAttributedString *)text during:(CGFloat)times view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelAttributedString = text;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
@@ -559,9 +559,9 @@
 + (MBProgressHUD *)drawRoundLoadingViewWithAttributedString:(NSMutableAttributedString *)text view:(UIView *)view
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeCustomView;
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelAttributedString = text;
     HUD.square = YES;
     CAShapeLayer *layer = [CAShapeLayer layer];
@@ -632,8 +632,8 @@
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
     HUD.mode = MBProgressHUDModeText;
-    HUD.color = kcolorTVGrayBorder;
-    HUD.labelColor = kColorBlackBean;
+    HUD.color = kColorTextGray;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelAttributedString = notice;
     HUD.labelFont = CUSTOMFONT(14.f);
     [HUD hide:YES afterDelay:times];
@@ -643,11 +643,11 @@
 + (void)showAttributedTitle:(NSMutableAttributedString *)title AttributedDetail:(NSMutableAttributedString *)detail View:(UIView *)view During:(CGFloat)times
 {
     MBProgressHUD *HUD = [MBProgressHUD createHUD:view];
-    HUD.color = kcolorTVGrayBorder;
+    HUD.color = kColorTextGray;
     HUD.mode = MBProgressHUDModeText;
     HUD.detailsLabelFont = CUSTOMFONT(10.f);
     HUD.labelFont = CUSTOMFONT(14.f);
-    HUD.labelColor = kColorBlackBean;
+    HUD.labelColor = kColorTitleBlack;
     HUD.labelAttributedString = title;
     HUD.detailAttributedString = detail;
     [HUD hide:YES afterDelay:times];

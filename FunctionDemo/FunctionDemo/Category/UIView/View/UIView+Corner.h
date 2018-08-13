@@ -8,16 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, CHAZICORNERSIT) {
-    CORNERSETALL            =   ~0UL,
-    CORNERSETLEFTTOP        =   1 << 0,
-    CORNERSETLEFTBOTTOM     =   1 << 1,
-    CORNERSETRIGHTTOP       =   1 << 2,
-    CORNERSETRIGHTBOTTOM    =   1 << 3
-};
-
 @interface UIView (Corner)
 
-- (void)drawRoundRectInContextWithRadius:(CGFloat)radius corners:(UIRectCorner)corners;
+- (void)drawRoundRectInContextWithRadius:(CGFloat)radius corners:(UIRectCorner)corners LineWidth:(CGFloat)lineWidth LineColor:(UIColor *)lineColor;
 
 @end

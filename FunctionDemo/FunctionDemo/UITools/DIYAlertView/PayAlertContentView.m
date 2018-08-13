@@ -82,7 +82,7 @@
             if ([userinfo objectForKey:TitleInfo]) {
                 titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 12.f, 24 + imageSize.height * 0.5 - 10.f, MAXTEXTWIDTH - imageSize.width - 28.f, 20.f)];
                 titleLabel.font = CUSTOMFONT(17.f);
-                titleLabel.textColor = kColorBlackBean;
+                titleLabel.textColor = kColorTitleBlack;
                 titleLabel.text = [userinfo objectForKey:TitleInfo];
                 [titleLabel sizeToFit];
                 [self addSubview:titleLabel];
@@ -102,7 +102,7 @@
             if ([userinfo objectForKey:TitleInfo]) {
                 titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 12.f, 24 + imageSize.height * 0.5 - 10.f, textW, 20.f)];
                 titleLabel.font = CUSTOMFONT(17.f);
-                titleLabel.textColor = kColorBlackBean;
+                titleLabel.textColor = kColorTitleBlack;
                 titleLabel.text = [userinfo objectForKey:TitleInfo];
                 [titleLabel sizeToFit];
                 [self addSubview:titleLabel];
@@ -116,14 +116,14 @@
             mutableDetail.editable = NO;
             mutableDetail.font = CUSTOMFONT(14.f);
             mutableDetail.text = [userinfo objectForKey:MessageInfo];
-            mutableDetail.textColor = kColorGrayBtn;
+            mutableDetail.textColor = kColorBGGray;
             [self addSubview:mutableDetail];
         } else {
             if ([userinfo objectForKey:MessageInfo]) {
                 detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetHeight(textRect) - detailArray.count * 16.f - 8.f, MAXTEXTWIDTH - 16.f, detailArray.count * 16.f)];
                 detailLabel.text = [userinfo objectForKey:MessageInfo];
                 detailLabel.font = CUSTOMFONT(14.f);
-                detailLabel.textColor = kColorGrayBtn;
+                detailLabel.textColor = kColorBGGray;
                 detailLabel.textAlignment = NSTextAlignmentCenter;
                 [self addSubview:detailLabel];
             } else {
@@ -137,7 +137,7 @@
             titleLabel.textAlignment = NSTextAlignmentCenter;
             titleLabel.text = [userinfo objectForKey:TitleInfo];
             titleLabel.font = CUSTOMFONT(17.f);
-            titleLabel.textColor = kColorBlackBean;
+            titleLabel.textColor = kColorTitleBlack;
             [self addSubview:titleLabel];
         }
         if (detailArray.count > 5) {
@@ -146,14 +146,14 @@
             mutableDetail.editable = NO;
             mutableDetail.font = CUSTOMFONT(14.f);
             mutableDetail.text = [userinfo objectForKey:MessageInfo];
-            mutableDetail.textColor = kColorGrayBtn;
+            mutableDetail.textColor = kColorBGGray;
             [self addSubview:mutableDetail];
         } else {
             if ([userinfo objectForKey:MessageInfo]) {
                 detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, CGRectGetHeight(textRect) - detailArray.count * 16.f - 8.f, MAXTEXTWIDTH - 16.f, detailArray.count * 16.f)];
                 detailLabel.text = [userinfo objectForKey:MessageInfo];
                 detailLabel.font = CUSTOMFONT(14.f);
-                detailLabel.textColor = kColorGrayBtn;
+                detailLabel.textColor = kColorBGGray;
                 detailLabel.textAlignment = NSTextAlignmentCenter;
                 [self addSubview:detailLabel];
             } else {
@@ -179,9 +179,9 @@
             [button_1 setTitle:action_1.actionTitle forState:UIControlStateNormal];
             [button_1 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
             if (action_1.type == PayAlertActionCancel) {
-                [button_1 setTitleColor:kColorRedContent forState:UIControlStateNormal];
+                [button_1 setTitleColor:kColorPriceRed forState:UIControlStateNormal];
             } else {
-                [button_1 setTitleColor:kColorBlackContent forState:UIControlStateNormal];
+                [button_1 setTitleColor:kColorTitleBlack forState:UIControlStateNormal];
             }
             [self addSubview:button_1];
         } else if (buttonArray.count == 2) {
@@ -196,9 +196,9 @@
             [button_1 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
             button_1.tag = 96188 + 1;
             if (action_1.type == PayAlertActionCancel) {
-                [button_1 setTitleColor:kColorRedContent forState:UIControlStateNormal];
+                [button_1 setTitleColor:kColorPriceRed forState:UIControlStateNormal];
             } else {
-                [button_1 setTitleColor:kColorBlackContent forState:UIControlStateNormal];
+                [button_1 setTitleColor:kColorTitleBlack forState:UIControlStateNormal];
             }
             [self addSubview:button_1];
             PayAlertAction *action_2 = [buttonArray lastObject];
@@ -208,9 +208,9 @@
             [button_2 setTitle:action_2.actionTitle forState:UIControlStateNormal];
             button_2.tag = 96188 + 2;
             if (action_2.type == PayAlertActionCancel) {
-                [button_2 setTitleColor:kColorRedContent forState:UIControlStateNormal];
+                [button_2 setTitleColor:kColorPriceRed forState:UIControlStateNormal];
             } else {
-                [button_2 setTitleColor:kColorBlackContent forState:UIControlStateNormal];
+                [button_2 setTitleColor:kColorTitleBlack forState:UIControlStateNormal];
             }
             [button_2 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:button_2];
@@ -222,9 +222,9 @@
                 PayAlertAction *action = [buttonArray objectAtIndex:i];
                 UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
                 if (action.type == PayAlertActionCancel) {
-                    [button setTitleColor:kColorRedContent forState:UIControlStateNormal];
+                    [button setTitleColor:kColorPriceRed forState:UIControlStateNormal];
                 } else {
-                    [button setTitleColor:kColorBlackContent forState:UIControlStateNormal];
+                    [button setTitleColor:kColorTitleBlack forState:UIControlStateNormal];
                 }
                 button.tag = 96198 + i;
                 button.frame = CGRectMake(0, CGRectGetHeight(textRect) + 0.5 + i * 44.5, MAXTEXTWIDTH, 44.f);

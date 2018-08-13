@@ -65,8 +65,8 @@
                              options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                           attributes:dic
                              context:nil]
-               .size;
-
+    .size;
+    
     return rect.height;
 }
 
@@ -100,21 +100,21 @@
                              options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                           attributes:dic
                              context:nil]
-               .size;
-
+    .size;
+    
     return rect.width;
 }
 
 - (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont *)font {
     NSDictionary *attribute = @{NSFontAttributeName : font};
-
+    
     CGSize retSize = [self boundingRectWithSize:size
                                         options:
-                                            NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                      NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                      attributes:attribute
                                         context:nil]
-                         .size;
-
+    .size;
+    
     return retSize;
 }
 
@@ -142,7 +142,7 @@
 
 #pragma mark--截取字符串中指定两个字符之间的字符串
 + (NSString *)calNSStringWithStar:(NSString *)startStr End:(NSString *)endStr BaseStr:(NSString *)baseStr {
-
+    
     NSRange start = [baseStr rangeOfString:startStr];
     NSRange end = [baseStr rangeOfString:endStr];
     NSString *sub = [baseStr substringWithRange:NSMakeRange(start.location + 1, end.location - start.location - 1)];
@@ -166,7 +166,7 @@
         [attributedStrErr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:redRange];
         return attributedStrErr;
     }
-
+    
     NSMutableAttributedString *resultStr = [[NSMutableAttributedString alloc] init];
     for (int i = 0; i < [strArr count]; i++) {
         if ([[strArr objectAtIndex:i] isKindOfClass:[NSString class]] && [[colorArr objectAtIndex:i] isKindOfClass:[UIColor class]]) {
@@ -244,7 +244,7 @@
 
 /**
  计算行数
-
+ 
  @param str 传入的字符串
  @param font 字体
  @param width label宽度
@@ -257,19 +257,19 @@
     CGFloat oneRowHeight = [@"占位" sizeWithAttributes:@{NSFontAttributeName : font}].height;
     CGSize textSize = [str boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font } context:nil].size;
     CGFloat rows = textSize.height / oneRowHeight;
-
+    
     return rows;
 }
 
 /**
  判断字符串是否只由数字字母汉字组成
-
+ 
  @param baseStr 基字符串
  @return BOOL 是||否
  */
 + (BOOL)isNumAlphaChineseFomatOK:(NSString *)baseStr {
     for (int i = 0; i < [(NSString *) baseStr length]; ++i) {
-
+        
         int a = [(NSString *) baseStr characterAtIndex:i];
         if (isnumber(a) || isalpha(a) || (a >= 0x4e00 && a <= 0x9fa5)) {
             continue;
@@ -324,7 +324,7 @@
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-
+    
     if ([deviceString isEqualToString:@"iPhone3,1"]) return @"iPhone 4";
     if ([deviceString isEqualToString:@"iPhone3,2"]) return @"iPhone 4";
     if ([deviceString isEqualToString:@"iPhone3,3"]) return @"iPhone 4";
@@ -351,13 +351,13 @@
     if ([deviceString isEqualToString:@"iPhone10,5"]) return @"美版(Global/A1897)iPhone 8 Plus";
     if ([deviceString isEqualToString:@"iPhone10,3"]) return @"国行(A1865)、日行(A1902)iPhone X";
     if ([deviceString isEqualToString:@"iPhone10,6"]) return @"美版(Global/A1901)iPhone X";
-
+    
     if ([deviceString isEqualToString:@"iPod1,1"]) return @"iPod Touch 1G";
     if ([deviceString isEqualToString:@"iPod2,1"]) return @"iPod Touch 2G";
     if ([deviceString isEqualToString:@"iPod3,1"]) return @"iPod Touch 3G";
     if ([deviceString isEqualToString:@"iPod4,1"]) return @"iPod Touch 4G";
     if ([deviceString isEqualToString:@"iPod5,1"]) return @"iPod Touch (5 Gen)";
-
+    
     if ([deviceString isEqualToString:@"iPad1,1"]) return @"iPad";
     if ([deviceString isEqualToString:@"iPad1,2"]) return @"iPad 3G";
     if ([deviceString isEqualToString:@"iPad2,1"]) return @"iPad 2 (WiFi)";
@@ -407,11 +407,28 @@
     return deviceString;
 }
 
+- (BOOL)isChinese
+{
+    NSString *match = @"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
+}
 
+- (BOOL)includeChinese
+{
+    for(int i = 0; i < [self length]; i++)
+    {
+        int a = [self characterAtIndex:i];
+        if(a > 0x4e00 && a < 0x9fff){
+            return YES;
+        }
+    }
+    return NO;
+}
 
 /**
  电话号码 中间4位变*
-
+ 
  @param mobile 电话号码
  @return 变*后的电话号码
  */

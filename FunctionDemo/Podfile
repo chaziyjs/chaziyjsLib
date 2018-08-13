@@ -1,0 +1,16 @@
+platform:ios, '9.0'
+
+target 'FunctionDemo' do
+    pod 'UMCCommon'
+    pod 'UMCAnalytics'
+    pod 'UMCErrorCatch'
+    pod 'AFNetworking'
+    pod 'YYKit'
+    pod 'MJRefresh'
+    pod 'FLAnimatedImage'
+    pod 'SDWebImage'
+    pod 'VasSonic'
+    pod 'FMDB'
+    pod 'CocoaAsyncSocket'
+    pod 'TZImagePickerController'
+end

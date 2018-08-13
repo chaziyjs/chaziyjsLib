@@ -71,7 +71,7 @@
 
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, position == PPBarItemPosition_left ? 16 : 0, 0, position == PPBarItemPosition_left ? 0 : 16);
     [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:kColorBlackBean forState:UIControlStateNormal];
+    [btn setTitleColor:kColorTitleBlack forState:UIControlStateNormal];
     [btn.titleLabel setFont:CUSTOMFONT(15.f)];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [self loadItemWithCustomView:btn position:position];

@@ -58,4 +58,8 @@
 
 // 举报界面单独用
 + (NSArray *)getLinesArrayOfStringInLabelNotMain:(NSString *)string font:(UIFont *)font andLableWidth:(CGFloat)lableWidth;
+
+- (BOOL)includeChinese;
+
+- (BOOL)isChinese;
 @end
