@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, EventHandlerModelType)
     DIYEvent                =   8006
 };
 
+
+
 @interface EventHandlerModel : NSObject
 /**
  * 事件存储字典

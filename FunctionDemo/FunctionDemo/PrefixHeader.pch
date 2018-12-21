@@ -20,6 +20,7 @@
 #import "NSString+EX.h"
 #import "UIImage+Color.h"
 #import "UIControl+btnControl.h"
+#import "UIView+Corner.h"
 
 #import "YYKit.h"
 #import "UIImageView+WebCache.h"

@@ -236,18 +236,5 @@ static dispatch_once_t onceToken;
     }
 }
 
-#pragma mark -  头图、开机广告、广告弹窗点击计数
-- (void)touchStatisticsParameter:(NSString *)tpid advid:(NSString *)advid click:(NSString *)click
-{
-    if (tpid == nil || [tpid isEqualToString:@""]) {
-        FLog(@"error TPID = %@", tpid);
-        return;
-    }
-//    [APIManager SafeGET:[NSString stringWithFormat:@"%@%@", kApiBaseUrl, kAdTouchCountURL] parameters:@{@"tpid" : tpid,@"advid": advid, @"click" : click} needCache:NO success:^(NSURLSessionDataTask *task, id responseObject, BOOL cacheResult) {
-//        FLog(@"点击计数 = response = %@", responseObject);
-//    } failure:^(NSURLSessionDataTask *task, NSError *error, NSNumber *result, id cacheData, NSString *msg) {
-//        FLog(@"计数统计错误error = %@", error);
-//    }];
-}
 
 @end

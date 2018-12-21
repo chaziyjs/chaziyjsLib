@@ -72,22 +72,25 @@
 #define     IMAGEASSETS(name)                       ([[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"ImageSets.bundle/%@%@", name, ([UIScreen mainScreen].scale > 2.f ? @"@3x" : @"@2x")] ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal])
 
 //Size
-#define     iPhone4s                                (kScreenWidth == 320 ? YES : NO)
-#define     IPhone6p                                (kScreenHeight >= 736 ? YES : NO)
-#define     Adaptation                              (IPhone6p ? 1.1 : 1.0)
+//Size
+#define     iPhone4s                              (kScreenWidth == 320 ? YES : NO)
+#define     IPhone6p                              (kScreenHeight >= 736 ? YES : NO)
+#define     Adaptation                            (IPhone6p ? 1.1 : 1.0)
+#define     kBottomBarHeight                      (kDevice_Is_iPhoneX ? 83.f : 49.f)
+#define     IPXNAV64                              (kDevice_Is_iPhoneX ? 88.f : 64.f)
+#define     IPXSTATEBAR                           (kDevice_Is_iPhoneX ? 44.f : 20.f)
 
-#define WW                                          kScreenWidth / 375.0
+#define     kDevice_Is_iPhoneX                    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO || [UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO || [UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IPXNAV64                                (kDevice_Is_iPhoneX ? 88. : 64.)
+#define     kDevice_iPhoneXR                      ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
 
-//IfLogined
-//判断用户登录状态 if kUserLoginStatement == nil    如果 == nil 未登录, != nil登录
-#define     kUserLoginStatement         kStandardUserDefaultsObject(@"userCookies")
+#define     kDevice_iPhoneXSMax                   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define     kDevice_iPhoneX                       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
-//判断我的参与，点击进入后，红点一天后再显示，记录日期
-#define     kMyAttentionClickDate    kStandardUserDefaultsObject(kStandardUserDefaultsObject(@"userid"))
+#define      kDevice_IS_IPAD                       (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
+#define      kDevice_IS_IPHONE                     (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
 //weak self
 #define     kWeakSelf(type)                     __weak typeof(type) weak##type = type
@@ -110,7 +113,6 @@
 #define        kAppIdentifier                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]
 #define     kAppBuildVersion                      [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
 
-#define     kDevice_Is_iPhoneX                    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 //System version
 #define     SYS_VERSION                           floorf([[UIDevice currentDevice].systemVersion floatValue])
 #define     IS_IOS_8                              floorf([[UIDevice currentDevice].systemVersion integerValue]) == 8 ? 1 : 0

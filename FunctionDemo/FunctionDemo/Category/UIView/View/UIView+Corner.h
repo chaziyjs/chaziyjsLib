@@ -12,4 +12,10 @@
 
 - (void)drawRoundRectInContextWithRadius:(CGFloat)radius corners:(UIRectCorner)corners LineWidth:(CGFloat)lineWidth LineColor:(UIColor *)lineColor;
 
+- (void)addShadowWithOpacity:(float)shadowOpacity
+                shadowRadius:(CGFloat)shadowRadius
+                  shadowSize:(CGSize)shadowSize
+                 shadowColor:(UIColor *)shadowColor
+             andCornerRadius:(CGFloat)cornerRadius;
+
 @end
