@@ -40,15 +40,6 @@
 		0C2307CD21CC853D000176BC /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C521CC853D000176BC /* CustomTextView.m */; };
 		0C2307CE21CC853D000176BC /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C721CC853D000176BC /* CustomTextField.m */; };
 		0C2307CF21CC853D000176BC /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C821CC853D000176BC /* CustomInputView.m */; };
-		0C2307D121CC8A6C000176BC /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307D021CC8A6C000176BC /* libAFNetworking.a */; };
-		0C2307D321CC8A6C000176BC /* libCocoaAsyncSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307D221CC8A6C000176BC /* libCocoaAsyncSocket.a */; };
-		0C2307D521CC8A6C000176BC /* libFLAnimatedImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307D421CC8A6C000176BC /* libFLAnimatedImage.a */; };
-		0C2307D721CC8A6C000176BC /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307D621CC8A6C000176BC /* libFMDB.a */; };
-		0C2307D921CC8A6C000176BC /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307D821CC8A6C000176BC /* libMJRefresh.a */; };
-		0C2307DB21CC8A6C000176BC /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307DA21CC8A6C000176BC /* libSDWebImage.a */; };
-		0C2307DD21CC8A6C000176BC /* libTZImagePickerController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307DC21CC8A6C000176BC /* libTZImagePickerController.a */; };
-		0C2307DF21CC8A6C000176BC /* libVasSonic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307DE21CC8A6C000176BC /* libVasSonic.a */; };
-		0C2307E121CC8A6C000176BC /* libYYKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2307E021CC8A6C000176BC /* libYYKit.a */; };
 		E01AB08420C4DBF300C63388 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E01AB08320C4DBF300C63388 /* UIView+YSTextInputKeyboard.m */; };
 		E01F0A5820E1BD3B00F2EA51 /* PayAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A4E20E1BD3B00F2EA51 /* PayAlertAction.m */; };
 		E01F0A5920E1BD3B00F2EA51 /* PayAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5020E1BD3B00F2EA51 /* PayAlertContentView.m */; };
@@ -439,15 +430,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2307D121CC8A6C000176BC /* libAFNetworking.a in Frameworks */,
-				0C2307D321CC8A6C000176BC /* libCocoaAsyncSocket.a in Frameworks */,
-				0C2307D521CC8A6C000176BC /* libFLAnimatedImage.a in Frameworks */,
-				0C2307D721CC8A6C000176BC /* libFMDB.a in Frameworks */,
-				0C2307D921CC8A6C000176BC /* libMJRefresh.a in Frameworks */,
-				0C2307DB21CC8A6C000176BC /* libSDWebImage.a in Frameworks */,
-				0C2307DD21CC8A6C000176BC /* libTZImagePickerController.a in Frameworks */,
-				0C2307DF21CC8A6C000176BC /* libVasSonic.a in Frameworks */,
-				0C2307E121CC8A6C000176BC /* libYYKit.a in Frameworks */,
 				E0E96FF3212131BF006A5B04 /* CoreTelephony.framework in Frameworks */,
 				E0E96FF1212131B1006A5B04 /* SystemConfiguration.framework in Frameworks */,
 				E09ECD2D208DC01D0065141F /* libicucore.A.tbd in Frameworks */,
@@ -1688,7 +1670,58 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"FMDB\"",
+					"-l\"MJRefresh\"",
+					"-l\"MMKV\"",
+					"-l\"SDWebImage\"",
+					"-l\"TZImagePickerController\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMAnalytics\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMErrorCatch\"",
+					"-framework",
+					"\"WebP\"",
+					"-licucore",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FunctionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1709,7 +1742,58 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"FMDB\"",
+					"-l\"MJRefresh\"",
+					"-l\"MMKV\"",
+					"-l\"SDWebImage\"",
+					"-l\"TZImagePickerController\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMAnalytics\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMErrorCatch\"",
+					"-framework",
+					"\"WebP\"",
+					"-licucore",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FunctionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
