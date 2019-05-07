@@ -40,6 +40,13 @@
 		0C2307CD21CC853D000176BC /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C521CC853D000176BC /* CustomTextView.m */; };
 		0C2307CE21CC853D000176BC /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C721CC853D000176BC /* CustomTextField.m */; };
 		0C2307CF21CC853D000176BC /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2307C821CC853D000176BC /* CustomInputView.m */; };
+		19E850A222814C6A00B9F711 /* DXZErrorCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509422814C6A00B9F711 /* DXZErrorCodeManager.m */; };
+		19E850A322814C6A00B9F711 /* DXZBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509822814C6A00B9F711 /* DXZBaseRequest.m */; };
+		19E850A422814C6A00B9F711 /* DXZNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509A22814C6A00B9F711 /* DXZNetworkPrivate.m */; };
+		19E850A522814C6A00B9F711 /* DXZNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509C22814C6A00B9F711 /* DXZNetworkConfig.m */; };
+		19E850A622814C6A00B9F711 /* DXZRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509D22814C6A00B9F711 /* DXZRequest.m */; };
+		19E850A722814C6A00B9F711 /* DXZCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8509E22814C6A00B9F711 /* DXZCacheConfig.m */; };
+		19E850A822814C6A00B9F711 /* DXZNetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E850A022814C6A00B9F711 /* DXZNetworkAPI.m */; };
 		E01AB08420C4DBF300C63388 /* UIView+YSTextInputKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E01AB08320C4DBF300C63388 /* UIView+YSTextInputKeyboard.m */; };
 		E01F0A5820E1BD3B00F2EA51 /* PayAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A4E20E1BD3B00F2EA51 /* PayAlertAction.m */; };
 		E01F0A5920E1BD3B00F2EA51 /* PayAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F0A5020E1BD3B00F2EA51 /* PayAlertContentView.m */; };
@@ -228,6 +235,20 @@
 		0C2307DC21CC8A6C000176BC /* libTZImagePickerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTZImagePickerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2307DE21CC8A6C000176BC /* libVasSonic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVasSonic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2307E021CC8A6C000176BC /* libYYKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libYYKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E8509422814C6A00B9F711 /* DXZErrorCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZErrorCodeManager.m; sourceTree = "<group>"; };
+		19E8509522814C6A00B9F711 /* DXZRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZRequest.h; sourceTree = "<group>"; };
+		19E8509622814C6A00B9F711 /* DXZNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZNetworkConfig.h; sourceTree = "<group>"; };
+		19E8509722814C6A00B9F711 /* DXZNetworkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZNetworkAPI.h; sourceTree = "<group>"; };
+		19E8509822814C6A00B9F711 /* DXZBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZBaseRequest.m; sourceTree = "<group>"; };
+		19E8509922814C6A00B9F711 /* DXZCacheConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZCacheConfig.h; sourceTree = "<group>"; };
+		19E8509A22814C6A00B9F711 /* DXZNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZNetworkPrivate.m; sourceTree = "<group>"; };
+		19E8509B22814C6A00B9F711 /* DXZErrorCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZErrorCodeManager.h; sourceTree = "<group>"; };
+		19E8509C22814C6A00B9F711 /* DXZNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZNetworkConfig.m; sourceTree = "<group>"; };
+		19E8509D22814C6A00B9F711 /* DXZRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZRequest.m; sourceTree = "<group>"; };
+		19E8509E22814C6A00B9F711 /* DXZCacheConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZCacheConfig.m; sourceTree = "<group>"; };
+		19E8509F22814C6A00B9F711 /* DXZBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZBaseRequest.h; sourceTree = "<group>"; };
+		19E850A022814C6A00B9F711 /* DXZNetworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXZNetworkAPI.m; sourceTree = "<group>"; };
+		19E850A122814C6A00B9F711 /* DXZNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXZNetworkPrivate.h; sourceTree = "<group>"; };
 		90E02CFEEF81A871600BAC49 /* Pods-FunctionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionDemo/Pods-FunctionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9CFD0607683466743FB8B26D /* libPods-FunctionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunctionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01AB08220C4DBF300C63388 /* UIView+YSTextInputKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YSTextInputKeyboard.h"; sourceTree = "<group>"; };
@@ -595,6 +616,27 @@
 			path = CustomDatePikerView;
 			sourceTree = "<group>";
 		};
+		19E8509322814C6A00B9F711 /* DXZNetworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				19E8509F22814C6A00B9F711 /* DXZBaseRequest.h */,
+				19E8509822814C6A00B9F711 /* DXZBaseRequest.m */,
+				19E8509922814C6A00B9F711 /* DXZCacheConfig.h */,
+				19E8509E22814C6A00B9F711 /* DXZCacheConfig.m */,
+				19E8509B22814C6A00B9F711 /* DXZErrorCodeManager.h */,
+				19E8509422814C6A00B9F711 /* DXZErrorCodeManager.m */,
+				19E8509722814C6A00B9F711 /* DXZNetworkAPI.h */,
+				19E850A022814C6A00B9F711 /* DXZNetworkAPI.m */,
+				19E8509622814C6A00B9F711 /* DXZNetworkConfig.h */,
+				19E8509C22814C6A00B9F711 /* DXZNetworkConfig.m */,
+				19E850A122814C6A00B9F711 /* DXZNetworkPrivate.h */,
+				19E8509A22814C6A00B9F711 /* DXZNetworkPrivate.m */,
+				19E8509522814C6A00B9F711 /* DXZRequest.h */,
+				19E8509D22814C6A00B9F711 /* DXZRequest.m */,
+			);
+			path = DXZNetworkAPI;
+			sourceTree = "<group>";
+		};
 		BF76BA4A16292C70FF1532D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +768,7 @@
 		E0A834432079AC2700828F4C /* FunctionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				19E8509322814C6A00B9F711 /* DXZNetworkAPI */,
 				E01F0A5D20E1C43600F2EA51 /* AdListView.h */,
 				E01F0A5E20E1C43600F2EA51 /* AdListView.m */,
 				E0A834442079AC2700828F4C /* AppDelegate.h */,
@@ -1378,6 +1421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E96FF421213299006A5B04 /* APIManager.m in Sources */,
+				19E850A422814C6A00B9F711 /* DXZNetworkPrivate.m in Sources */,
 				E0A8350C2079E39800828F4C /* DCPathCenterButton.m in Sources */,
 				E0A834DF2079AF1900828F4C /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				E0E96FD221212035006A5B04 /* RootTabBC.m in Sources */,
@@ -1398,6 +1442,7 @@
 				E0A834D12079AF1900828F4C /* NSDate+CalculatePeriod.m in Sources */,
 				E0A834E42079AF1900828F4C /* UIView+Corner.m in Sources */,
 				E0A834E62079AF1900828F4C /* KMSwizzle.m in Sources */,
+				19E850A822814C6A00B9F711 /* DXZNetworkAPI.m in Sources */,
 				E076B9B920CF895D00A3DEDC /* ScrollViewController.m in Sources */,
 				E0E96FCE21212035006A5B04 /* LaunchPageControl.m in Sources */,
 				E0A834ED2079AF1900828F4C /* UIViewController+KMNavigationBarTransition.m in Sources */,
@@ -1414,6 +1459,7 @@
 				E01F0A5A20E1BD3B00F2EA51 /* PayAlertView.m in Sources */,
 				0C2307AB21CC8526000176BC /* PAWKPanGestureRecognizer.m in Sources */,
 				0C2307A921CC8526000176BC /* WKBaseWebView.m in Sources */,
+				19E850A622814C6A00B9F711 /* DXZRequest.m in Sources */,
 				E01F0A5F20E1C43600F2EA51 /* AdListView.m in Sources */,
 				E09ECD27208DBAA60065141F /* RegexKitLite.m in Sources */,
 				E0E96FCA21212035006A5B04 /* BaseNC.m in Sources */,
@@ -1423,6 +1469,7 @@
 				0C2307B121CC8526000176BC /* PreviewVc.m in Sources */,
 				E0A834E72079AF1900828F4C /* KMWeakObjectContainer.m in Sources */,
 				0C2307CD21CC853D000176BC /* CustomTextView.m in Sources */,
+				19E850A222814C6A00B9F711 /* DXZErrorCodeManager.m in Sources */,
 				E0A834E92079AF1900828F4C /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
 				E0A834492079AC2700828F4C /* ViewController.m in Sources */,
 				E039A734207B35FC00DE8829 /* MBProgressHUD.m in Sources */,
@@ -1469,8 +1516,11 @@
 				E0E96FCD21212035006A5B04 /* LaunchAdImageView.m in Sources */,
 				E0A834EE2079AF1900828F4C /* UIViewController+MBHUD.m in Sources */,
 				0C23076921CC851A000176BC /* DIYSegmentView.m in Sources */,
+				19E850A322814C6A00B9F711 /* DXZBaseRequest.m in Sources */,
+				19E850A722814C6A00B9F711 /* DXZCacheConfig.m in Sources */,
 				E0A8350D2079E39800828F4C /* DCPathItemButton.m in Sources */,
 				0C2307A621CC8526000176BC /* registerURLSchemes.m in Sources */,
+				19E850A522814C6A00B9F711 /* DXZNetworkConfig.m in Sources */,
 				0C2307A221CC8526000176BC /* PAWebViewMenu.m in Sources */,
 				E0E96FD521212A53006A5B04 /* NearbyShopDataModel.m in Sources */,
 				E0E96FDF21212C2B006A5B04 /* DIYEventModel.m in Sources */,
@@ -1662,7 +1712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LAUP3KAVGT;
+				DEVELOPMENT_TEAM = L7PTBH3E8V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FunctionDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = FunctionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1722,7 +1772,7 @@
 					"\"WebP\"",
 					"-licucore",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FunctionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaziyjs.FunctionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1734,7 +1784,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LAUP3KAVGT;
+				DEVELOPMENT_TEAM = L7PTBH3E8V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FunctionDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = FunctionDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1794,7 +1844,7 @@
 					"\"WebP\"",
 					"-licucore",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FunctionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaziyjs.FunctionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

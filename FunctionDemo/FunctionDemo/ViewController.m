@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RegexKitLite.h"
+#import "DXZNetworkAPI/DXZRequest.h"
 
 @interface ViewController ()
 
@@ -83,7 +84,33 @@
 //        }
 //    }
 //    [self KVOListen];
-    [self AdViewBuild];
+//    [self AdViewBuild];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.bounds = CGRectMake(0, 0, 100, 30);
+    btn.center = CGPointMake(CGRectGetWidth(self.view.frame) * 0.5, CGRectGetHeight(self.view.frame) * 0.5);
+    [btn addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitle:@"Touch" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    
+    [DXZRequest requestWithURL:@"api/a/apple/appleGoodsList.json" param:nil requestMethod:DXZRequestMethodPOST ComletionBlockWithSuccess:^(__kindof DXZBaseRequest * _Nonnull request) {
+        NSLog(@"success = %@", request.responseJSONObject);
+    } failure:^(__kindof DXZBaseRequest * _Nonnull request) {
+        NSLog(@"failure = %@", request.error);
+    }];
+}
+
+- (void)showAlert
+{
+    PayAlertView *alert = [PayAlertView payAlertWithTitle:@"asdffdsdsfdsafdsfdsfdas" Message:@"asdfdsfdsadsfsdfsdfdsfsdfsdfsdf" Image:nil ImageSize:CGSizeZero AlertStyle:PayAlertWithoutImage];
+    [alert addAction:[PayAlertAction actionWithTitle:@"确认" Style:PayAlertActionDefine Action:^(PayAlertAction *action) {
+        [alert payAlertViewDismissComplete:nil];
+    }]];
+    [alert addAction:[PayAlertAction actionWithTitle:@"关闭" Style:PayAlertActionCancel Action:^(PayAlertAction *action) {
+        [alert payAlertViewDismissComplete:nil];
+    }]];
+    [alert payAlertViewPresentComplete:nil];
 }
 
 - (void)KVOListen

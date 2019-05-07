@@ -11,6 +11,7 @@
 #import "TestObject.h"
 #import "ScrollViewController.h"
 #import "AdListView.h"
+#import "PayAlertView.h"
 
 @interface ViewController : UIViewController
 

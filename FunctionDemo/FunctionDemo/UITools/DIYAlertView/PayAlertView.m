@@ -25,7 +25,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         style = alertStyle;
-        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
         actionArray = [NSMutableArray array];
     }
     return self;

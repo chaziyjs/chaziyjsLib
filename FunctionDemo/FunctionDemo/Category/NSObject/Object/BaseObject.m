@@ -13,14 +13,14 @@ void dynamicResolveMethod(id self, SEL _cmd) {
 }
 
 @implementation BaseObject {
-    NSMutableDictionary *undefineProperty;
+    NSMapTable *undefineProperty;
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        undefineProperty = [NSMutableDictionary dictionary];
+        undefineProperty = [NSMapTable mapTableWithKeyOptions:NSMapTableWeakMemory valueOptions:NSMapTableStrongMemory];
     }
     return self;
 }
@@ -65,6 +65,7 @@ void dynamicResolveMethod(id self, SEL _cmd) {
 
 - (void)dealloc
 {
+    [undefineProperty removeAllObjects];
     undefineProperty = nil;
 }
 
